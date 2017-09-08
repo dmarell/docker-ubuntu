@@ -98,13 +98,14 @@ ls: cannot access 'k*': No such file or directory
 The Dockerfile specifies how the new image should be built. In this example we start with the same
 ubuntu image as we used before but with `curl` and `git` installed:
 
+Create the following `Dockerfile` in an empty directory somewhere:
 ```
 FROM ubuntu
 RUN apt-get update && apt-get install -y \
     curl \
     git
 ```
-First, build the image:
+Build an image from this `Dockerfile`:
 ```bash
 $ docker build -t myubuntu-image .
 ...
@@ -112,7 +113,7 @@ Successfully built 42243b430191
 Successfully tagged myubuntu-image:latest
 ```
 
-Start it, and give it a name:
+Start it, and give it a name this time:
 ```bash
 $ docker run -it --name myubuntu-1 myubuntu-image bash
 root@632e26f1fd8a:/# 
