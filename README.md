@@ -96,7 +96,7 @@ ls: cannot access 'k*': No such file or directory
 ## Build a customized image
 
 The Dockerfile specifies how the new image should be built. In this example we start with the same
-ubuntu image as we useed before but with curl and git installed:
+ubuntu image as we used before but with `curl` and `git` installed:
 
 ```
 FROM ubuntu
@@ -148,7 +148,7 @@ RUN useradd -ms /bin/bash user
 USER user
 WORKDIR /home/user
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]```
+ENTRYPOINT ["tail", "-f", "/dev/null"]
 ```
 
 Note that we added `rm -rf /var/lib/apt/lists/*` according to [Dockerfile best practicies](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
