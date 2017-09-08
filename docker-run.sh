@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker run -d --name ubuntu-pipeline ubuntu-pipeline
+docker run -d --name myubuntu-1 myubuntu-image

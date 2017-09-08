@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build -t ubuntu-pipeline .
+docker build -t myubuntu-image .
